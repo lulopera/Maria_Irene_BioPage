@@ -17,23 +17,25 @@
 	</header>
 
 	<section class="iconCon">
-		<img src="images/maria-icon.jpg">
-		<img src="images/irene-icon.jpeg">
-		
+		<img id="img" src="images/maria.jpg" alt="Maria">
 	</section>
 
 	<article class="about">
 		<!-- btn container -->
-	<div class="btn-container">
-		<button class="tab-btn active" data-id="maria">Maria Lopera</button>
-		<button class="tab-btn" data-id="irene">Irene Vinu</button>
-    </div>
-		<article class="about-content">
+	<!-- <div class="btn-container"> -->
+		<nav>
+		<ul id="mainNav">
+			<li data-plan="lopera" id="maria"><a href="#">Maria Lopera</a></li>
+			<li data-plan="vinu" id="irene"><a href="#">Irene Vinu</a></li>
+		</ul>
+		</nav>
+   
+		<article id="aboutCon">
 			<!-- single item -->
-			<div class="content active" id="maria"><h4>Maria</h4>
-				<p>Maria is a Interactive Media Designer  from Colombia. Currently  she is living in London, Canada. Maria used to work as anesthesiologist in her home country, but she decided to change paths after she moved to Canada. Maria has dedicated the past years to learn how to develop websites and how to create interactive media contents related to  health and Medicine. One of her major goals is to create educational transmedia platforms directed to english and spanish communities. She has wide experience using different applications and softwares  such as Cinema4D, After Effects, Illustrator, Photoshop and Premiere.</p></div>
+			<div class="contentBio" id="lopera"><h4>Maria</h4>
+				<p>Maria is an Interactive Media Designer  from Colombia. Currently  she is living in London, Canada. Maria used to work as anesthesiologist in her home country, but she decided to change paths after she moved to Canada. Maria has dedicated the past years to learn how to develop websites and how to create interactive media contents related to  healthcare and Medicine. One of her major goals is to create educational transmedia platforms directed to english and spanish-speaking communities. She has wide experience using different applications and softwares  such as Cinema4D, After Effects, Illustrator, Photoshop and Premiere.</p></div>
 			<!-- end of single item -->
-			<div class="content" id="irene"><h4>Irene</h4></div>
+			<div class="contentBio" id="vinu"><h4>Irene</h4></div>
 		</article>
 
 	</article>
