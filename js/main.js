@@ -1,31 +1,42 @@
-// (() => {
-//   console.log('fired');
+(() => {
+  console.log('fired');
 
-  const btns = document.querySelectorAll(".tab-btn");
-  const about = document.querySelector(".about");
-  const articles = document.querySelectorAll(".content");
-  const icons = document.querySelectorAll(".iconCon");
+  let nameSelector = document.querySelectorAll("#mainNav li");
+  let about =document.querySelectorAll(".contentBio");
 
-about.addEventListener("click", function(e) {
-  const id = e.target.dataset.id;
-  if (id) {
-    // remove active from other buttons
-    btns.forEach(function (btn) {
-      btn.classList.remove("active");
-      e.target.classList.add("active");
+  let buttons = document.querySelectorAll("#mainNav li");
+  let changeImg = document.querySelector("#img");
 
-    });
-    // hide other articles
-    articles.forEach(function(article){
-      article.classList.remove('active')
-    })
-    const element = document.getElementById(id);
-    element.classList.add("active");
+
+  function switchDiv(e) {
+    console.log("called");
+    for (let i=0; i<about.length; i++ ) {
+      about[i].style.display = 'none';
+    }
+
+    let selected = e.currentTarget.dataset.plan;
+    document.querySelector(`#${selected}`).style.display ='block';
+  
   }
-});
+
+  for(let i=0; i<nameSelector.length; i++ ) {
+    nameSelector[i].addEventListener("click", switchDiv, false);
+  }
 
 
-// })();
+
+
+  function changePic(e) {
+    e.preventDefault();
+    changeImg.src="images/"+e.currentTarget.id+".jpg";
+  }
+
+  for(let i=0; i<buttons.length; i++){
+    buttons[i].addEventListener("click", changePic,false);
+  }
+
+
+})();
 
 
 
